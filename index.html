@@ -25,38 +25,44 @@
         </p>
         <p>You <i>know</i> you want to.</p>
       </div>
-      <div class="body">
+      <div class="body" id="body">
+        <!--The id 'body' is purely for the link-->
         <div class="row1"><h1>Let's do this!</h1></div>
-        <form action="" method="">
+        <form action="" method="post" id="info-form">
           <div class="row2">
             <div>
               <label for="first-name">First name: </label>
               <br />
-              <input type="text" id="first-name" name="my-first-name" />
+              <input
+                type="text"
+                id="first-name"
+                name="my-first-name"
+                required
+              />
             </div>
             <div>
               <label for="last-name">Last name: </label>
               <br />
-              <input type="text" id="last-name" name="my-last-name" />
+              <input type="text" id="last-name" name="my-last-name" required />
             </div>
           </div>
           <div class="row3">
             <div>
               <label for="email">Email: </label>
               <br />
-              <input type="email" id="email" name="my-name" />
+              <input type="email" id="email" name="my-name" required />
             </div>
             <div>
               <label for="phone">Phone: </label>
               <br />
-              <input type="text" id="phone" name="phone" />
+              <input type="text" id="phone" name="phone" required />
             </div>
           </div>
           <div class="row4">
             <div>
               <label for="password">Password:</label>
               <br />
-              <input type="password" id="password" name="password" />
+              <input type="password" id="password" name="password" required />
             </div>
             <div>
               <label for="password-confirm">Confirm password:</label>
@@ -65,15 +71,17 @@
                 type="password"
                 id="password-confirm"
                 name="password-confirm"
+                required
               />
             </div>
           </div>
         </form>
       </div>
       <div class="footer">
-        <button type="submit">Create Account</button>
-        <br />
-        <a href="#body">Log in</a>
+        <!--Because submit button not in form, JS is required to submit-->
+        <button type="submit" id="create-account">Create Account</button>
+        <br /><br />
+        Already have an account? <a href="#body">Log in</a>
       </div>
     </div>
   </body>
