@@ -1,3 +1,7 @@
+:root {
+    --margin-size: 20px;
+}
+
 html body {
     margin: 0;
     padding: 0;
@@ -35,6 +39,9 @@ body {
     font-family: 'NorseBold', sans-serif; /* Fallback to a generic font family */
     color: white;
 
+    white-space: nowrap; /* Overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     width: 100%;
     font-size: clamp(1rem, 4rem, 8rem); /* min, ideal, max */
@@ -71,19 +78,19 @@ body {
 }
 
 .body .row2 {
-    margin: 5px;
+    margin: var(--margin-size);
     display: flex;
     gap: 10%;
 }
 
 .body .row3 {
-    margin: 5px;
+    margin: var(--margin-size);
     display: flex;
     gap: 10%;
 }
 
 .body .row4 {
-    margin: 5px;
+    margin: var(--margin-size);
     display: flex;
     gap: 10%;
 }
@@ -111,4 +118,17 @@ a, a:visited, a:active {
     text-decoration: none;
     font-weight: bold;
     color: #596D48;
+}
+
+/* CSS for forms */
+/* Default Input Styles */
+input {
+    border: 1px solid #E5E7EB; /* Light border by default */
+    /* other styles for input */
+}
+  
+  /* Error Class */
+.error {
+    border: 1px solid red; /* Change border to red when there is an error */
+    /* other error styles, like maybe changing the background color or adding padding */
 }

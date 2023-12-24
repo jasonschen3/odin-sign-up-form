@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Sign Up Form</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="sign-up.js" defer></script>
   </head>
   <body>
     <div class="sidebar">
@@ -28,7 +29,7 @@
       <div class="body" id="body">
         <!--The id 'body' is purely for the link-->
         <div class="row1"><h1>Let's do this!</h1></div>
-        <form action="" method="post" id="info-form">
+        <form action="" method="" id="info-form">
           <div class="row2">
             <div>
               <label for="first-name">First name: </label>
@@ -53,13 +54,20 @@
               <input type="email" id="email" name="my-name" required />
             </div>
             <div>
-              <label for="phone">Phone: </label>
+              <label for="phone">Phone (US): </label>
               <br />
-              <input type="text" id="phone" name="phone" required />
+              <input
+                type="number"
+                id="phone"
+                name="phone"
+                required
+                minlength="10"
+                maxlength="10"
+              />
             </div>
           </div>
           <div class="row4">
-            <div>
+            <div id="password-text">
               <label for="password">Password:</label>
               <br />
               <input type="password" id="password" name="password" required />
@@ -79,7 +87,7 @@
       </div>
       <div class="footer">
         <!--Because submit button not in form, JS is required to submit-->
-        <button type="submit" id="create-account">Create Account</button>
+        <button type="button" id="create-account">Create Account</button>
         <br /><br />
         Already have an account? <a href="#body">Log in</a>
       </div>
