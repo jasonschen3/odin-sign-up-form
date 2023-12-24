@@ -1,5 +1,6 @@
 :root {
     --margin-size: 20px;
+    --padding-size: 20px 40px;
 }
 
 html body {
@@ -59,18 +60,18 @@ body {
 }
 
 .header{
-    padding: 20px;
+    padding: var(--padding-size);
     padding-top: 10vh;
     background-color: rgb(249,250,251);
 }
 
 .header p {
-    font-size: clamp(1rem, 2rem, 2rem);
+    font-size: clamp(1rem, 1.5rem, 1.5rem);
     font-weight: bold;
 }
 
 .body {
-    padding: 20px;
+    padding: var(--padding-size);
     display: flex;
     flex-direction: column;
 
@@ -96,7 +97,7 @@ body {
 }
 
 .footer {
-    padding: 20px;
+    padding: var(--padding-size);
     font-size: 1rem;
 }
 
