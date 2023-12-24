@@ -1,3 +1,86 @@
-img {
-    width: 500px;
+html body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 50vw;
+    height: 100vh;
+    background: url('../images/leaves.jpg') no-repeat center center;
+    background-size: cover; /* This will ensure that the background covers the sidebar area */
+    display: flex;
+    position: relative; /* Keep this if you need to position children absolutely within the sidebar */
+    z-index: 1; /* Ensure the sidebar is underneath the logo */
+}
+
+@font-face {
+    font-family: 'NorseBold';
+    src: url('Norse-Bold.otf') format('opentype');
+}
+
+#odin-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    position: absolute;
+
+
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    font-family: 'NorseBold', sans-serif; /* Fallback to a generic font family */
+    color: white;
+
+
+    width: 100%;
+    font-size: clamp(1rem, 4rem, 8rem); /* min, ideal, max */
+}
+
+#odin-logo {
+    width: clamp(40px, 30%, 50%);
+}
+
+
+/* Main Portion */
+.main-portion {
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    padding: 20px;
+    padding-top: 10vh;
+    background-color: lightblue;
+}
+
+.header p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.body .row2 {
+    display: flex;
+    gap: 10%;
+}
+
+.body .row3 {
+    display: flex;
+    gap: 10%;
+}
+
+.body .row4 {
+    display: flex;
+    gap: 10%;
 }
